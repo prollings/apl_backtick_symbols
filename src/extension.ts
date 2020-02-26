@@ -4,28 +4,6 @@ import * as vscode from 'vscode';
 import { promises } from 'dns';
 
 export function activate(context: vscode.ExtensionContext) {
-	const provider = vscode.languages.registerCompletionItemProvider({ language: "*" }, {
-		provideCompletionItems(doc, pos) {
-			let add_ci = (char: string, sub: string) => {
-				let nci = new vscode.CompletionItem(char);
-				nci.insertText = sub;
-				nci.detail = sub;
-				nci.kind = vscode.CompletionItemKind.Function;
-				nci.preselect = true;
-				return nci;
-			};
-			return [
-				add_ci("i", "⍳"),
-				add_ci("r", "⍴"),
-				add_ci("w", "⍵"),
-				add_ci("I", "⍸"),
-				add_ci("W", "⍹")
-			];
-		}
-	});
-
-	context.subscriptions.push(provider);
-
 	let key_map: { [key: string]: string; } = {
 		'`':'⋄', '1':'¨', '2':'¯', '3':'<', '4':'≤', '5':'=', '6':'≥','7':'>', '8':'≠', '9':'∨', '0':'∧', '-':'×', '=':'÷',
 		'q':'?', 'w':'⍵', 'e':'∊', 'r':'⍴', 't':'~', 'y':'↑', 'u':'↓', 'i':'⍳', 'o':'○', 'p':'*', '[':'←', ']':'→',
