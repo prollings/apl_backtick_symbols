@@ -17,7 +17,13 @@
 		"keybindings":{
 			"command": "extension.backtick",
 			"key": "`"
-		}
+		},
+		"languages": [{
+			"extensions": [
+				".apl"
+			],
+			"id": "apl"
+		}]
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
