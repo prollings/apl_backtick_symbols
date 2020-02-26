@@ -4,7 +4,6 @@ import * as vscode from 'vscode';
 import { promises } from 'dns';
 
 export function activate(context: vscode.ExtensionContext) {
-	console.log("HELLO!");
 	const provider = vscode.languages.registerCompletionItemProvider({ language: "*" }, {
 		provideCompletionItems(doc, pos) {
 			let add_ci = (char: string, sub: string) => {
@@ -25,6 +24,8 @@ export function activate(context: vscode.ExtensionContext) {
 		}
 	});
 
+	context.subscriptions.push(provider);
+
 	let key_map: { [key: string]: string; } = {
 		'`':'⋄', '1':'¨', '2':'¯', '3':'<', '4':'≤', '5':'=', '6':'≥','7':'>', '8':'≠', '9':'∨', '0':'∧', '-':'×', '=':'÷',
 		'q':'?', 'w':'⍵', 'e':'∊', 'r':'⍴', 't':'~', 'y':'↑', 'u':'↓', 'i':'⍳', 'o':'○', 'p':'*', '[':'←', ']':'→',
@@ -35,8 +36,6 @@ export function activate(context: vscode.ExtensionContext) {
 		'A':'⍺', 'S':'⌈', 'D':'⌊', 'F':'_', 'G':'∇', 'H':'∆', 'J':'⍤', 'K':'⌸', 'L':'⌷', ':':'≡', '"':'≢', '|':'⊣',
 		'Z':'⊆', 'X':'⊃', 'C':'∩', 'V':'∪', 'B':'⊥', 'N':'⊤', 'M':'|', '<':'⍪', '>':'⍙', '?':'⍠',
 	};
-
-	context.subscriptions.push(provider);
 
 	let pending = false;
 
