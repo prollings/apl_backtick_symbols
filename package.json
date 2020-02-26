@@ -2,10 +2,13 @@
 	"name": "aplbackticksymbols",
 	"displayName": "APL Backtick Symbols",
 	"description": "APL symbols from backtick codes",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"publisher": "prollings",
 	"icon": "icon.png",
-	"keywords": ["apl", "dyalog"],
+	"keywords": [
+		"apl",
+		"dyalog"
+	],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/prollings/apl_backtick_symbols"
@@ -21,16 +24,18 @@
 		"onLanguage:apl"
 	],
 	"contributes": {
-		"keybindings":{
+		"keybindings": {
 			"command": "extension.backtick",
 			"key": "`"
 		},
-		"languages": [{
-			"extensions": [
-				".apl"
-			],
-			"id": "apl"
-		}]
+		"languages": [
+			{
+				"extensions": [
+					".apl"
+				],
+				"id": "apl"
+			}
+		]
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
