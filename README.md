@@ -33,3 +33,7 @@ Uppercase
 Other
 
 - \<space> => `⋄`
+
+## Other information
+
+This does not depend on Dyalog's compiler.
