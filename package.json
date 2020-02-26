@@ -26,7 +26,8 @@
 	"contributes": {
 		"keybindings": {
 			"command": "extension.backtick",
-			"key": "`"
+			"key": "`",
+			"when": "editorLangId == apl"
 		},
 		"languages": [
 			{
