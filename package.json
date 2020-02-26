@@ -27,7 +27,7 @@
 		"keybindings": {
 			"command": "extension.backtick",
 			"key": "`",
-			"when": "editorLangId == apl"
+			"when": "editorLangId == apl && editorTextFocus"
 		},
 		"languages": [
 			{
