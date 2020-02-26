@@ -1,8 +1,14 @@
 {
-	"name": "apl_backtick_symbols",
+	"name": "aplbackticksymbols",
 	"displayName": "APL Backtick Symbols",
 	"description": "APL symbols from backtick codes",
 	"version": "0.0.1",
+	"publisher": "prollings",
+	"icon": "icon.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/prollings/apl_backtick_symbols"
+	},
 	"engines": {
 		"vscode": "^1.42.0"
 	},
