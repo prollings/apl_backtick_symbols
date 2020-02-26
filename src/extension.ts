@@ -34,8 +34,11 @@ export function activate(context: vscode.ExtensionContext) {
 					&& (this_pos.character - active_pos.character) === 1
 					&& ev.contentChanges[0].text.length === 1) {
 						let replace_range = new vscode.Range(active_pos, this_pos.translate(0, 1));
-						let symbol = key_map[ev.contentChanges[0].text];
-						te.edit((e) => e.replace(replace_range, symbol)).then();
+						let key = ev.contentChanges[0].text;
+						if (key in key_map) {
+							let symbol = key_map[key];
+							te.edit((e) => e.replace(replace_range, symbol)).then();
+						}
 				}
 				pending = false;
 			});
