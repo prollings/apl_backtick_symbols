@@ -5,6 +5,7 @@
 	"version": "0.0.1",
 	"publisher": "prollings",
 	"icon": "icon.png",
+	"keywords": ["apl", "dyalog"],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/prollings/apl_backtick_symbols"
