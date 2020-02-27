@@ -2,7 +2,7 @@
 	"name": "aplbackticksymbols",
 	"displayName": "APL Backtick Symbols",
 	"description": "APL symbols from backtick codes",
-	"version": "0.1.4",
+	"version": "0.1.5",
 	"publisher": "prollings",
 	"icon": "icon.png",
 	"markdown": "standard",
