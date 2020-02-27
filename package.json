@@ -5,6 +5,7 @@
 	"version": "0.1.4",
 	"publisher": "prollings",
 	"icon": "icon.png",
+	"markdown": "standard",
 	"keywords": [
 		"apl",
 		"dyalog"
